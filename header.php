@@ -1,48 +1,75 @@
-<?php
-?><!DOCTYPE html>
+<?php?>
+<!DOCTYPE html>
 <html>
 <head>
 	<?php wp_head(); ?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124740773-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-124740773-1');
+	</script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="//kada-lab.jp">
-	<meta name="description" content="セイカ未来プロジェクトは新しい未来を提案します。">
+	<meta name="description" content="">
 	<meta name="format-detection" content="telephone=no,address=no,email=no">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="canonical" href="//kada-lab.jp">
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/icon.png">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/sanitize.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/blog/assets/js/jquery-2.2.1.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/blog/assets/js/jquery-3.2.1.min.js"></script>
 	<script>
 
 	</script>
 </head>
 <body <?php body_class(); ?>>
 
-	<header class="flex">
-		<a href="//kada-lab.jp"><img class="logo" src="<?php bloginfo('stylesheet_directory'); ?>/blog/img/seika-mirai_logo_w-sq.svg"></a>
-		<nav>
-			<ul>
-				<li><a href="<?php echo home_url(); ?>/../blog/" title="">BLOG</a></li>
-				<li><a href="<?php echo home_url(); ?>/../works/">WORKS</a>
-			</ul>
-		</nav>
+	<header>
+		<div class="header-inner">
+			<div class="header-logo">
+				<img src="" alt="">
+			</div>
+			<nav class="header-nav">
+				<ul>
+					<a href="about/">
+						<li>加太分室について</li>
+					</a>
+					<a href="blog/">
+						<li>ニュース</li>
+					</a>
+					<a href="document/">
+						<li>研究資料</li>
+					</a>
+					<a href="#access">
+						<li>アクセス</li>
+					</a>
+					<a href="#contact">
+						<li class="header-action-btn">お問い合わせ</li>
+					</a>
+				</ul>
+			</nav>
+		</div>
 	</header>
+
+	<section class="sns-post-bar">
+		<ul>
+			<a href="">
+				<li>
+					<img src="" alt="Twitter">
+				</li>
+			</a>
+			<a href="">
+				<li>
+					<img src="" alt="Facebook">
+				</li>
+			</a>
+		</ul>
+	</section>
 
 
 	<main>
-
-		<h1 class="title">BLOG</h1>
-		<small class="title-info">日々の活動や、注目した最新技術など</small>
-		<?php $_cat = get_the_category() ?>
-		<nav class="category clearfix">
-			<ul>
-				<li class="all"><a href="<?php echo home_url(); ?>">ALL</a></li>
-				<li><a href="<?php echo get_category_link( get_category_by_slug('press') -> term_id ); ?>">PRESS</a></li>
-				<li><a href="<?php echo get_category_link( get_category_by_slug('diary') -> term_id ); ?>">DIARY</a></li>
-				<li><a href="<?php echo get_category_link( get_category_by_slug('casestudy') -> term_id ); ?>">CASESTUDY</a></li>
-				<li><a href="<?php echo get_category_link( get_category_by_slug('other') -> term_id ); ?>">OTHER</a></li>
-			</ul>
-		</nav>
