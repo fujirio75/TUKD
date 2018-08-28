@@ -12,8 +12,8 @@
 	<link rel="canonical" href="//kada-lab.jp">
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/icon.png">
-	<link rel="stylesheet" href="/assets/css/sanitize.css">
-	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/sanitize.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/blog/assets/js/jquery-2.2.1.min.js"></script>
 	<script>
 
