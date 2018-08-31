@@ -22,7 +22,7 @@
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/icon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/blog/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.2.1.min.js"></script>
 	<script>
 
 	</script>
@@ -32,7 +32,7 @@
 	<header>
 		<div class="header-inner">
 			<div class="header-logo">
-				<img src="" alt="">
+				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/kada-lab-logo.svg" alt="logo">
 			</div>
 			<nav class="header-nav">
 				<ul>
@@ -56,20 +56,20 @@
 		</div>
 	</header>
 
-	<section class="sns-post-bar">
+	<div class="sns-post-bar">
 		<ul>
 			<a href="">
 				<li>
-					<img src="" alt="Twitter">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
 				</li>
 			</a>
 			<a href="">
 				<li>
-					<img src="" alt="Facebook">
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-facebook.svg" alt="Facebook">
 				</li>
 			</a>
 		</ul>
-	</section>
+	</div>
 
 
 	<main>
