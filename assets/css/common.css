@@ -546,7 +546,7 @@ header {
           height: 100%;
           padding: 0 15px;
           line-height: 108px;
-          color: #2D1709;
+          color: #4C2A13;
           font-size: 14px;
           list-style: none; }
           header .header-inner nav ul li:hover {
@@ -575,21 +575,27 @@ header {
 
 html, body {
   width: 100%;
-  color: #2D1709; }
+  color: #4C2A13; }
+  html li, body li {
+    list-style: none; }
 
 section {
   font-size: 15px;
-  min-height: 500px;
-  height: 100vh;
   overflow: hidden; }
-  section:nth-child(even) .contents-wrapper:before {
+  section .contents-wrapper:before {
     display: block;
     left: 0;
     content: "";
     width: calc((100% - 1024px) / 2);
     height: 186px;
-    background: #9898AD;
+    background: #f00;
     position: absolute; }
+  section.contents-colorscheme-transparent .contents-wrapper:before {
+    background: transparent; }
+  section.contents-colorscheme-white .contents-wrapper:before {
+    background: #9898AD; }
+  section.contents-colorscheme-brand-accent .contents-wrapper:before {
+    background: #fff; }
   section .contents-wrapper {
     margin: 0 auto;
     width: 1024px;
@@ -613,7 +619,19 @@ section {
         bottom: 30px;
         height: 44px;
         position: absolute; }
+    section .contents-wrapper .btn-more {
+      margin: 0 0 auto auto;
+      width: 265px;
+      height: 66px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 66px;
+      color: #fff;
+      background: #AE7650; }
   section.contents-top {
+    min-height: 500px;
+    height: 100vh;
     position: relative; }
     section.contents-top .background-image {
       width: 100%;
@@ -646,45 +664,110 @@ section {
             display: block;
             content: "";
             background: url(../img/btn-message-path.svg); }
-  section.contents-article .article-list ul {
-    display: flex;
-    margin: 30px 0;
-    padding: 0; }
-    section.contents-article .article-list ul li {
-      display: block;
-      margin: 0 20px 0 0;
-      width: 392px;
-      height: 392px;
-      background: #dadada;
-      list-style: none;
-      position: relative; }
-      section.contents-article .article-list ul li a {
+  section.contents-article .article-list {
+    padding: 30px 0; }
+    section.contents-article .article-list ul {
+      display: flex;
+      padding: 0; }
+      section.contents-article .article-list ul li {
         display: block;
-        width: 100%;
-        height: 100%;
-        padding: 30px 20px;
-        text-decoration: none; }
-        section.contents-article .article-list ul li a:after {
-          right: 0;
-          bottom: 0;
+        margin: 0 20px 0 0;
+        width: 392px;
+        height: 392px;
+        background: #dadada;
+        list-style: none;
+        position: relative; }
+        section.contents-article .article-list ul li img {
           display: block;
-          content: "くわしく見る";
-          text-align: center;
-          line-height: 66px;
-          font-size: 20px;
-          font-weight: 700;
-          color: #fff;
-          width: 180px;
-          height: 66px;
-          background: #AE7650;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 0; }
+        section.contents-article .article-list ul li a {
+          display: block;
+          width: 392px;
+          height: 392px;
+          padding: 30px 20px;
+          background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+          text-decoration: none;
+          overflow: hidden;
           position: absolute;
           z-index: 99; }
-        section.contents-article .article-list ul li a time {
-          font-size: 24px;
-          color: #fff; }
-        section.contents-article .article-list ul li a h4 {
-          margin: 125px 0;
-          font-size: 30px;
-          color: #fff; }
+          section.contents-article .article-list ul li a:after {
+            right: 0;
+            bottom: 0;
+            display: block;
+            content: "くわしく見る";
+            text-align: center;
+            line-height: 66px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            width: 180px;
+            height: 66px;
+            background: #AE7650;
+            position: absolute;
+            z-index: 99; }
+          section.contents-article .article-list ul li a time {
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6); }
+          section.contents-article .article-list ul li a h4 {
+            margin: 125px 0;
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6); }
+  section.contents-before-article i {
+    right: 0;
+    display: block;
+    height: 562px;
+    width: calc((100% - 1024px) / 2);
+    background: #F5F5F9;
+    position: absolute;
+    z-index: 1; }
+  section.contents-before-article .contents-before-article-contents {
+    display: flex;
+    margin: auto 0 auto auto;
+    width: 816px;
+    height: 562px;
+    background: #F5F5F9; }
+    section.contents-before-article .contents-before-article-contents h3 {
+      margin: 0 -200px;
+      padding: 131px 0;
+      height: 36px; }
+    section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner {
+      margin: 0 0 auto auto;
+      width: 700px; }
+      section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul a {
+        text-decoration: none; }
+      section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li {
+        height: 115px;
+        margin: 0 0 20px;
+        padding: 20px;
+        background: #fff; }
+        section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li:hover {
+          background: #ddd; }
+        section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li time {
+          font-size: 13px;
+          color: #9898AD; }
+        section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li h4 {
+          margin: 10px 0;
+          font-size: 20px;
+          color: #4C2A13; }
+  section.contents-about {
+    background: #9898AD url(../img/about-background.png) no-repeat center right/contain;
+    background-blend-mode: multiply; }
+    section.contents-about .contents-wrapper .contents-description {
+      padding: 0 85px; }
+      section.contents-about .contents-wrapper .contents-description .contents-description-paragraph {
+        margin: 80px 0;
+        width: 365px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 30px; }
+    section.contents-about .contents-wrapper .btn-more {
+      margin: 0 auto;
+      background: #fff;
+      color: #AE7650; }
 
 /*# sourceMappingURL=common.css.map */
