@@ -7,9 +7,11 @@ get_header(); ?>
 				<div class="contents-wrapper">
 					<div class="catch-message">
 						<img class="catch-message-paragraph" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/top-message.svg" alt="「これから」を一緒に考えましょう。">
-						<div class="btn-top-message">
+						<a href="#about">
+							<div class="btn-top-message">
 							メッセージへ
-						</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -122,14 +124,28 @@ get_header(); ?>
 						<h3>
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-googlemaps.svg" alt="Googlemaps">
 						</h3>
-						<div id="map"></div>
+						<div class="map-wrapper">
+							<div id="map">
+							</div>
+							<a href="https://goo.gl/maps/cho1dS1GzTR2">
+								<div class="btn-more">
+								GoogleMapsでひらく
+								</div>
+							</a>
+						</div>
 					</div>
 					<div class="contents-col-inner">
 						<h3>
 							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-contact.svg" alt="contactform">
 						</h3>
 						<div class="form-wrapper">
-
+							<p>加太分室へのご相談や活動に関するお問い合わせは下記リンク先のフォームよりお願いいたします。</p>
+							[contact-form-7 id="68" title="コンタクトフォーム 1"]
+							<!-- <a href="contact/">
+								<div class="btn-more">
+								お問い合わせフォームへ
+								</div>
+							</a> -->
 						</div>
 					</div>
 				</div>

@@ -530,6 +530,10 @@ header {
       width: 196px;
       height: 251px;
       background: linear-gradient(45deg, #AE7650, #AE6450); }
+      header .header-inner .header-logo a {
+        display: block;
+        width: 100%;
+        height: 100%; }
       header .header-inner .header-logo img {
         display: block;
         width: 136px;
@@ -575,9 +579,12 @@ header {
 
 html, body {
   width: 100%;
-  color: #4C2A13; }
+  color: #4C2A13;
+  background: #fff; }
   html li, body li {
     list-style: none; }
+  html a, body a {
+    text-decoration: none; }
 
 section {
   font-size: 15px;
@@ -599,7 +606,9 @@ section {
   section .contents-wrapper {
     margin: 0 auto;
     width: 1024px;
-    height: 100%; }
+    height: 100%;
+    font-size: 14px;
+    line-height: 30px; }
     section .contents-wrapper h2 {
       margin: 0;
       height: 186px;
@@ -688,7 +697,6 @@ section {
           height: 392px;
           padding: 30px 20px;
           background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
-          text-decoration: none;
           overflow: hidden;
           position: absolute;
           z-index: 99; }
@@ -737,8 +745,6 @@ section {
     section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner {
       margin: 0 0 auto auto;
       width: 700px; }
-      section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul a {
-        text-decoration: none; }
       section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li {
         height: 115px;
         margin: 0 0 20px;
@@ -761,9 +767,7 @@ section {
       section.contents-about .contents-wrapper .contents-description .contents-description-paragraph {
         margin: 80px 0;
         width: 365px;
-        color: #fff;
-        font-size: 16px;
-        line-height: 30px; }
+        color: #fff; }
     section.contents-about .contents-wrapper .btn-more {
       margin: 0 auto;
       background: #fff;

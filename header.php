@@ -43,7 +43,7 @@
 	<header>
 		<div class="header-inner">
 			<div class="header-logo">
-				<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/kada-lab-logo.svg" alt="logo">
+				<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/kada-lab-logo.svg" alt="logo"></a>
 			</div>
 			<nav class="header-nav">
 				<ul>
@@ -56,10 +56,10 @@
 					<a href="document/">
 						<li>研究資料</li>
 					</a>
-					<a href="#access">
+					<a href="#contact">
 						<li>アクセス</li>
 					</a>
-					<a href="#contact">
+					<a href="contact/">
 						<li class="header-action-btn">お問い合わせ</li>
 					</a>
 				</ul>
@@ -69,7 +69,7 @@
 
 	<div class="sns-post-bar">
 		<ul>
-			<a href="">
+			<a href="https://twitter.com/intent/tweet?text=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6+%E7%94%9F%E7%94%A3%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E6%89%80+%E5%B7%9D%E6%B7%BB%E7%A0%94%E7%A9%B6%E5%AE%A4+%E5%8A%A0%E5%A4%AA%E5%88%86%E5%AE%A4+%E5%9C%B0%E5%9F%9F%E3%83%A9%E3%83%9C+-+http%3A%2F%2Fkada-lab.jp%2F">
 				<li>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
 				</li>
