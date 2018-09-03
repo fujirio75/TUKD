@@ -23,8 +23,19 @@
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/blog/img/icon/icon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.2.1.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyOWxUm0wD1O9kdIRsW6CBt5HliZrAiS0&callback=initMap" type="text/javascript"></script>
 	<script>
-
+    function initMap() {
+        var latlng = new google.maps.LatLng( 34.808502, 135.639683 );//中心の緯度, 経度
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,//ズームの調整
+          center: latlng//上で設定した中心
+        });
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+      }
 	</script>
 </head>
 <body <?php body_class(); ?>>

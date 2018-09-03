@@ -117,6 +117,22 @@ get_header(); ?>
 				<h2>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h2-contact.svg" alt="CONTACT">
 				</h2>
+				<div class="contents-col">
+					<div class="contents-col-inner">
+						<h3>
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-googlemaps.svg" alt="Googlemaps">
+						</h3>
+						<div id="map"></div>
+					</div>
+					<div class="contents-col-inner">
+						<h3>
+							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-contact.svg" alt="contactform">
+						</h3>
+						<div class="form-wrapper">
+
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 

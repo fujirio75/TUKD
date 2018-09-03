@@ -67,7 +67,6 @@ section {
   }
   &.contents-top {
     min-height: 500px;
-    height: 100vh;
     position: relative;
     .background-image {
       width: 100%;
@@ -238,6 +237,20 @@ section {
         margin: 0 auto;
         background: #fff;
         color: $brand-main;
+      }
+    }
+  }
+  &.contents-contact {
+    .contents-col {
+      display: flex;
+      padding: 90px 0;
+      .contents-col-inner {
+        margin: 0 75px 0 0;
+        #map {
+         width: 625px;
+         height: 269px;
+         background-color: grey;
+        }
       }
     }
   }
