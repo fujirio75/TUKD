@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="article-list">
 					<ul>
 					<?php if ( have_posts() ) : ?>
-					<?php $primary_posts = get_posts(array('numberposts' => 99)); ?>
+					<?php $primary_posts = get_posts(array('numberposts' => 2)); ?>
 					<?php foreach ( $primary_posts as $post ) : setup_postdata( $post ); ?>
 						<li>
 						<?php
@@ -58,14 +58,14 @@ get_header(); ?>
 		<section id="article-before" class="contents-before-article contents-colorscheme-transparent">
 			<div class="contents-wrapper">
 				<i></i>
-				<div class="contents-before-article-contents">
+				<!-- <div class="contents-before-article-contents">
 					<h3>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-before-article.svg" alt="これまでの記事">
 					</h3>
 					<div class="contents-before-article-contents-inner">
 						<ul>
 								<?php if ( have_posts() ) : ?>
-								<?php $primary_posts = get_posts(array('numberposts' => 99)); ?>
+								<?php $primary_posts = get_posts(array('numberposts' => 5, 'offset' => 2)); ?>
 								<?php foreach ( $primary_posts as $post ) : setup_postdata( $post ); ?>
 								<?php
 									$_cat = get_the_category();
@@ -92,7 +92,7 @@ get_header(); ?>
 							さらに前のものはこちら
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 
@@ -107,9 +107,9 @@ get_header(); ?>
 							「東京大学 生産技術研究所 川添研究室 加太分室 地域ラボ」という長い名前のラボが、和歌山市の加太地域に設置されることになりました。<br>地域ラボの開設後は、私どものビジョンと市の政策を連動させ、空き家の建て替えや下水整備、電柱の地中化などのインフラ整備、地区の持つ漁業ブランドの強化による雇用創出など、デザインと政策の新しい関係を実践する予定です。
 						</p>
 					</div>
-					<div class="btn-more">
+					<!-- <div class="btn-more">
 						くわしくはこちら
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
@@ -140,12 +140,12 @@ get_header(); ?>
 						</h3>
 						<div class="form-wrapper">
 							<p>加太分室へのご相談や活動に関するお問い合わせは下記リンク先のフォームよりお願いいたします。</p>
-							[contact-form-7 id="68" title="コンタクトフォーム 1"]
-							<!-- <a href="contact/">
+							<!-- [contact-form-7 id="68" title="コンタクトフォーム 1"] -->
+							<a href="contact/">
 								<div class="btn-more">
 								お問い合わせフォームへ
 								</div>
-							</a> -->
+							</a>
 						</div>
 					</div>
 				</div>

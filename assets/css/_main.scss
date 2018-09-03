@@ -37,6 +37,9 @@ section {
     height: 100%;
     font-size: 14px;
     line-height: 30px;
+    @media screen and (max-width: 1024px)  {
+      width: 100%;
+    }
     h2 {
       margin: 0;
       height: 186px;
@@ -50,6 +53,9 @@ section {
         height: 44px;
         background: $brand-main;
         position: absolute;
+        @media screen and (max-width: 1024px)  {
+          width: 70px;
+        }
       }
       img {
         display: block;
@@ -57,6 +63,9 @@ section {
         bottom: 30px;
         height: 44px;
         position: absolute;
+        @media screen and (max-width: 1024px)  {
+          left: 53px;
+        }
       }
     }
     .btn-more {
@@ -72,13 +81,23 @@ section {
     }
   }
   &.contents-top {
-    min-height: 500px;
+    max-height: 600px;
     position: relative;
-    .background-image {
+    @media screen and (max-width: 1024px)  {
+      text-align: center;
+    }
+    .background-image,.attachment-post-thumbnail {
       width: 100%;
       min-width: 1024px;
+      height: 100%;
       position: relative;
       z-index: 0;
+      @media screen and (max-width: 1024px)  {
+        margin: 0vw -100vw;
+        min-width: 0;
+        width: auto;
+        height: 100vh;
+      }
     }
     .contents-inner {
       top: 0;
@@ -92,17 +111,28 @@ section {
         height: 65px;
         background: #fff;
         position: absolute;
+        @media screen and (max-width: 1024px)  {
+          height: 53px;
+        }
         .catch-message-paragraph {
           margin: auto;
           display: block;
           height: 18px;
           margin: 24px;
+          @media screen and (max-width: 1024px)  {
+            height: 14px;
+            margin: 20px;
+          }
         }
         .btn-top-message {
           padding: 0 20px;
           line-height: 65px;
           color: #fff;
           background: $brand-main;
+          @media screen and (max-width: 1024px)  {
+            padding: 0 12px;
+            line-height: 53px;
+          }
           &::after {
             display: block;
             content: "";
@@ -113,11 +143,20 @@ section {
     }
   }
   &.contents-article {
+    @media screen and (max-width: 1024px)  {
+      padding: 0 0 50px;
+    }
     .article-list {
     padding: 30px 0;
+    @media screen and (max-width: 1024px)  {
+      padding: 0;
+    }
       ul {
         display: flex;
         padding: 0;
+        @media screen and (max-width: 1024px)  {
+          display: block;
+        }
         li {
           display: block;
           margin: 0 20px 0 0;
@@ -126,6 +165,11 @@ section {
           background: #dadada;
           list-style: none;
           position: relative;
+          @media screen and (max-width: 1024px)  {
+            width: 90vw;
+            height: 90vw;
+            margin: 20px auto 0;
+          }
           img {
             display: block;
             width: 100%;
@@ -142,6 +186,10 @@ section {
             overflow: hidden;
             position: absolute;
             z-index: 99;
+            @media screen and (max-width: 1024px)  {
+              width: 90vw;
+              height: 90vw;
+            }
             &:after {
               right: 0;
               bottom: 0;
@@ -190,6 +238,9 @@ section {
       width: 816px;
       height: 562px;
       background: $brand-foundation;
+      @media screen and (max-width: 1024px)  {
+        width: 100%;
+      }
       h3 {
         margin: 0 -200px;
         padding: 131px 0;
@@ -198,6 +249,9 @@ section {
       .contents-before-article-contents-inner {
         margin: 0 0 auto auto;
         width: 700px;
+        @media screen and (max-width: 1024px)  {
+          width: 100%;
+        }
         ul {
           li {
             height: 115px;
@@ -224,13 +278,22 @@ section {
   &.contents-about {
     background: $brand-accent url(../img/about-background.png) no-repeat center right /contain;
     background-blend-mode: multiply;
+    @media screen and (max-width: 1024px)  {
+      background: $brand-accent url(../img/about-background.png) no-repeat center right /cover;
+    }
     .contents-wrapper {
       .contents-description {
         padding: 0 85px;
+        @media screen and (max-width: 1024px)  {
+          padding: 0 25px;
+        }
         .contents-description-paragraph {
           margin: 80px 0;
           width: 365px;
           color: #fff;
+          @media screen and (max-width: 1024px)  {
+            width: auto;
+          }
         }
       }
       .btn-more {
@@ -244,12 +307,95 @@ section {
     .contents-col {
       display: flex;
       padding: 90px 0;
+      @media screen and (max-width: 1024px)  {
+        display: block;
+        padding: 20px 0;
+      }
       .contents-col-inner {
         margin: 0 75px 0 0;
+        @media screen and (max-width: 1024px)  {
+          margin: 0 0 70px;
+        }
+        h3,p {
+          @media screen and (max-width: 1024px)  {
+            padding: 0 0 0 30px;
+          }
+        }
         #map {
          width: 625px;
          height: 269px;
          background-color: grey;
+         @media screen and (max-width: 1024px)  {
+           width: 100%;
+         }
+        }
+      }
+    }
+  }
+
+
+  &.page-contents-article {
+    margin: -76px 0 0;
+    position: relative;
+    z-index: 999;
+
+    .contents-wrapper {
+      display: flex;
+      min-height: 100vh;
+      @media screen and (max-width: 1024px)  {
+        display: block;
+      }
+      h1 {
+        display: block;
+        width: 684px;
+        margin: 50px 0;
+        font-size: 36px;
+        line-height: 48px;
+        position: relative;
+        z-index: 999;
+        @media screen and (max-width: 1024px)  {
+          width: 100%;
+          margin: 19px 0 39px;
+        }
+      }
+      .contents-info-post {
+        margin: 70px 70px 0 0;
+        width: 176px;
+        height: 260px;
+        padding: 20px;
+        color: $brand-accent;
+        background: $brand-foundation;
+        @media screen and (max-width: 1024px)  {
+          width: 100%;
+          height: auto;
+        }
+        p {
+          margin: 0;
+          @media screen and (max-width: 1024px)  {
+            display: inline-block;
+          }
+        }
+      }
+      .contents-paragraph {
+        p.p1,h1 {
+          @media screen and (max-width: 1024px)  {
+            padding: 0 30px;
+          }
+        }
+        h1 {
+          @media screen and (max-width: 1024px)  {
+            font-size: 28px;
+          }
+        }
+        .contents-paragraph-main {
+          width: 538px;
+          @media screen and (max-width: 1024px)  {
+            width: 100%;
+          }
+          .size-medium {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }

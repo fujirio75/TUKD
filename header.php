@@ -50,7 +50,7 @@
 					<a href="about/">
 						<li>加太分室について</li>
 					</a>
-					<a href="blog/">
+					<a href="article/">
 						<li>ニュース</li>
 					</a>
 					<a href="document/">

@@ -4,6 +4,9 @@ header {
   height: 108px;
   position: fixed;
   z-index: 99999;
+  @media screen and (max-width: 1024px)  {
+    height: 75px;
+  }
   .header-inner {
     margin: 0 auto;
     display: flex;
@@ -11,23 +14,42 @@ header {
     width: 1024px;
     height: 100%;
     background: #fff;
+    @media screen and (max-width: 1024px)  {
+      width: 100%;
+    }
     .header-logo {
       width: 196px;
       height: 251px;
       background: linear-gradient(45deg, $brand-main, $brand-sub);
+      @media screen and (max-width: 1024px)  {
+        width: 170px;
+        height: 180px;
+      }
       a {
         display: block;
         width: 100%;
         height: 100%;
+        padding: 94px 0 0;
+        @media screen and (max-width: 1024px)  {
+          display: flex;
+          padding: 0;
+        }
       }
       img {
         display: block;
         width: 136px;
-        margin: 94px auto 0;
+        margin: 0 auto;
+        @media screen and (max-width: 1024px)  {
+          margin: auto;
+          width: 125px;
+        }
       }
     }
     nav {
       height: 100%;
+      @media screen and (max-width: 1024px)  {
+        display: none;
+      }
       ul {
         display: flex;
         height: 100%;
@@ -60,7 +82,15 @@ header {
   right: 100px;
   position: fixed;
   z-index: 99999;
+  @media screen and (max-width: 1024px)  {
+    top: auto;
+    bottom: 5px;
+    right: 5px;
+  }
   ul {
+    @media screen and (max-width: 1024px)  {
+      display: flex;
+    }
     li {
       display: flex;
       margin: 0 0 3px;
@@ -68,6 +98,9 @@ header {
       height: 68px;
       background: #fff;
       list-style: none;
+      @media screen and (max-width: 1024px)  {
+        margin: 0 5px 3px 0;
+      }
       img {
         margin: auto;
       }
