@@ -11,7 +11,7 @@
 					<ul>
 						<a href="https://www.iis.u-tokyo.ac.jp/ja/about/"><li>生産技術研究所とは</li></a>
 						<a href="http://www.kwz.iis.u-tokyo.ac.jp/#know"><li>川添研究室について</li></a>
-						<a href="contact/"><li>お問い合わせ</li></a>
+						<a href="contactform/contact"><li>お問い合わせ</li></a>
 					</ul>
 				</div>
 			</div>

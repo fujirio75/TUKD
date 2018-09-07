@@ -1,10 +1,14 @@
 <?php
 get_header(); ?>
 
-<?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php
+	if(have_posts()):while(have_posts()):the_post();
+		$thumbnail_id = get_post_thumbnail_id();
+		$eye_img = wp_get_attachment_image_src( $thumbnail_id , 'large' );
+?>
 
 		<section class="contents-top">
-			<?php the_post_thumbnail(); ?>
+			<?php echo '<img src="'.$eye_img[0].'">';　 ?>
 		</section>
 
 		<section class="page-contents-article contents-colorscheme-transparent">

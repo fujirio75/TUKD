@@ -96,9 +96,14 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
 // Since 4.4
 remove_action('wp_head','wp_oembed_add_discovery_links');
 remove_action('wp_head','rest_output_link_wp_head');
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 
 
+function my_setup_theme() {
+    add_theme_support( 'title-tag' );
+}
+
+add_action( 'after_setup_theme', 'my_setup_theme' );
 
 // ユーザープロフィールの項目のカスタマイズ
 function my_user_meta($wb)

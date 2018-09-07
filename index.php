@@ -2,7 +2,7 @@
 get_header(); ?>
 
 		<section id="top" class="contents-top contents-colorscheme-transparent">
-			<img class="background-image" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/top-5.jpg" alt="">
+			<div id="top-back" class="background-image"></div>
 			<div class="contents-inner">
 				<div class="contents-wrapper">
 					<div class="catch-message">
@@ -32,6 +32,9 @@ get_header(); ?>
 							$_cat = get_the_category();
 							$cat_name = $_cat[0] -> name;
 							$title = get_the_title();
+							$thumb_id = get_post_thumbnail_id();                         // アイキャッチ画像のIDを取得
+  						$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  // $sizeサイズの画像内容を取得
+  						$thumb_src = $thumb_img[0];    // 画像のurlだけ取得
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
@@ -41,7 +44,7 @@ get_header(); ?>
 										} else {echo $post->post_title;}?></h4>
 								<div class="tag-list"></div>
 							</a>
-							<?php the_post_thumbnail(); ?>
+							<?php echo '<img src="'.$thumb_src.'">';　 ?>
 						</li>
 						<?php endforeach; wp_reset_postdata(); ?>
 								<?php remove_filter('the_category', 'add_category_en_name'); ?>
@@ -55,10 +58,10 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<section id="article-before" class="contents-before-article contents-colorscheme-transparent">
+		<!-- <section id="article-before" class="contents-before-article contents-colorscheme-transparent">
 			<div class="contents-wrapper">
 				<i></i>
-				<!-- <div class="contents-before-article-contents">
+				<div class="contents-before-article-contents">
 					<h3>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/h3-before-article.svg" alt="これまでの記事">
 					</h3>
@@ -92,9 +95,9 @@ get_header(); ?>
 							さらに前のものはこちら
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section id="about" class="contents-about contents-colorscheme-brand-accent">
 			<div class="contents-wrapper">
@@ -141,7 +144,7 @@ get_header(); ?>
 						<div class="form-wrapper">
 							<p>加太分室へのご相談や活動に関するお問い合わせは下記リンク先のフォームよりお願いいたします。</p>
 							<!-- [contact-form-7 id="68" title="コンタクトフォーム 1"] -->
-							<a href="contact/">
+							<a href="contactform/contact">
 								<div class="btn-more">
 								お問い合わせフォームへ
 								</div>
