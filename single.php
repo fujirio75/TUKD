@@ -1,33 +1,44 @@
 <?php
 get_header(); ?>
 
-<?php if(have_posts()):while(have_posts()):the_post(); ?>
+<?php
+	if(have_posts()):while(have_posts()):the_post();
+		$thumbnail_id = get_post_thumbnail_id();
+		$eye_img = wp_get_attachment_image_src( $thumbnail_id , 'large' );
+?>
 
-		<section class="content article">
-			<time><?php the_time('Y/m/d'); ?></time>
-			<h2><?php echo $post->post_title; ?></h2>
-			<div class="text-content">
-				<?php the_content(); ?>
-			</div>
-			<section class="footer">
-				<div class="share-list">
-					<ul>
-						<li>
+		<section class="contents-top">
+			<?php echo '<img src="'.$eye_img[0].'">';　 ?>
+		</section>
 
-						</li>
-						<li>
+		<section class="page-contents-article contents-colorscheme-transparent">
+			<div class="contents-wrapper">
 
-						</li>
-					</ul>
-				</div>
-				<div class="author">
+				<div class="contents-info-post">
+					<?php
+					    $big = 9999999999;
+					    $arg = array(
+					        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					        'current' => max( 1, get_query_var('paged') ),
+					        'total'   => $wp_query->max_num_pages
+					    );
+					    echo paginate_links($arg);
+					?>
 				<?php $author_id = $post->post_author; ?>
-					<p>この記事を書いたのは</p>
-					<?php echo get_avatar($author_id, 80); ?>
-					<h5><?php the_author(); ?></h5>
+					<time><?php the_time('Y.m.d'); ?></time>
+					<p>written by</p>
+					<p><?php the_author(); ?></p>
 					<p class="role"><?php the_author_meta('position'); ?></p>
 				</div>
-			</section>
+
+				<div class="contents-paragraph">
+					<h1><?php echo $post->post_title; ?></h1>
+					<div class="contents-paragraph-main">
+						<?php the_content(); ?>
+					</div>
+				</div>
+
+			</div>
 		</section>
 
 <?php endwhile;endif; ?>

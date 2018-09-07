@@ -2,32 +2,30 @@
 ?>
 
 	<footer>
-		<section class="footer-content">
-			<div class="col">
-				<ul>
-					<li><a href="http://www.kyoto-seika.ac.jp/">京都精華大学</a></li>
-					<li><a href="http://www.kyoto-seika.ac.jp/design/">京都精華大学デザイン学部</a></li>
-					<li><a href="https://twitter.com/seika_mirai">公式Twitter</a></li>
-					<li><a href="https://www.facebook.com/mirai.seikavisual/">公式Facebookページ</a></li>
-				</ul>
+		<div class="footer-inner">
+			<div class="footer-contents-wrapper">
+				<div class="footer-logo">
+					<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/kada-lab-logo.svg" alt="logo"></a>
+				</div>
+				<div class="footer-link-list">
+					<ul>
+						<a href="https://www.iis.u-tokyo.ac.jp/ja/about/"><li>生産技術研究所とは</li></a>
+						<a href="http://www.kwz.iis.u-tokyo.ac.jp/#know"><li>川添研究室について</li></a>
+						<a href="contactform/contact"><li>お問い合わせ</li></a>
+					</ul>
+				</div>
 			</div>
-			<div class="col">
-				<ul>
-					<li><a href="../about/">ABOUT</a></li>
-					<li><a href="../blog/">BLOG</a></li>
-					<li><a href="../works/">WORKS</a></li>
-					<li><a href="../team/">TEAM</a></li>
-					<li><a href="../contact/">CONTACT</a></li>
-				</ul>
+			<div class="footer-contents-wrapper">
+				<div class="footer-contents-wrapper-links">
+					<a href="https://www.u-tokyo.ac.jp/ja/"><img height="38px" width="134px" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer-tokyouniv.png" alt="logo"></a>
+					<a href="https://www.iis.u-tokyo.ac.jp/ja/"><img height="38px" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer-tokyouniv-lab.png" alt="logo"></a>
+				</div>
+				<div class="footer-contents-wrapper-links">
+					<a href="http://www.kwz.iis.u-tokyo.ac.jp/"><img height="38px" src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/footer-kawazoe-lab.png" alt="kawazoe-labratory"></a>
+				</div>
 			</div>
-		</section>
+		</div>
 	</footer>
-
-
-
-	<script type="text/javascript">
-
-	</script>
 
 	<?php wp_footer(); ?>
 
