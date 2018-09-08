@@ -24,26 +24,31 @@
 	<meta property="og:url" content="http://kada-lab.jp" />
 	<meta property="og:site_name" content="加太分室 地域ラボ" />
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/ogp.png" />
+	<meta property="fb:app_id" content="266420997323154">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
 	<link rel="canonical" href="//kada-lab.jp">
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/icon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.2.1.min.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/script.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyOWxUm0wD1O9kdIRsW6CBt5HliZrAiS0&callback=initMap" type="text/javascript"></script>
 	<script>
+		var wp_path = "<?php echo get_template_directory_uri();?>";//script.jsへの受け渡し
     function initMap() {
-        var latlng = new google.maps.LatLng( 34.276179, 135.073952 );//中心の緯度, 経度
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,//ズームの調整
-          center: latlng//上で設定した中心
-        });
-        var marker = new google.maps.Marker({
-          position: latlng,
-          map: map
-        });
-      }
+      var latlng = new google.maps.LatLng( 34.276179, 135.073952 );//中心の緯度, 経度
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,//ズームの調整
+        center: latlng//上で設定した中心
+      });
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: map
+      });
+    }
 	</script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/script.js"></script>
 </head>
 <body <?php body_class(); ?>>
 

@@ -1,7 +1,9 @@
 <?php
 get_header(); ?>
 
-	<section class="content error404">
+	<section class="contents-error">
+
+		
 
 	</section>
 

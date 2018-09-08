@@ -1,4 +1,8 @@
 <?php
+/* Template Name: 記事ページ */
+?>>
+
+<?php
 get_header(); ?>
 
 <?php

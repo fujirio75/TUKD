@@ -1,4 +1,14 @@
 (function(win, doc) {
+
+  function mypreload() {
+    for(var i = 0; i< arguments.length; i++){
+        $("<img>").attr("src", arguments[i]);
+    }
+  }
+  //関数の呼び出し。引数には先読みしておく画像のパスを指定
+  mypreload(wp_path + '/assets/img/top-0.jpg', wp_path + '/assets/img/top-1.jpg',wp_path + '/assets/img/top-2.jpg',wp_path + '/assets/img/top-3.jpg');
+
+
   var ScrollPoint;
   var Scrollnum;
 
@@ -16,13 +26,13 @@
     var DiffCounter = 1;
     setInterval(function(){
       if (DiffCounter < 2) {
-        $('#top-back').css({'background':'url(/wp-content/themes/kadakada/assets/img/top-' + DiffCounter + '.jpg)','background-size':'cover'});
+        $('#top-back').css({'background':'url(' + wp_path + '/assets/img/top-' + DiffCounter + '.jpg)','background-size':'cover'});
         DiffCounter++;
       } else {
-          $('#top-back').css({'background':'url(/wp-content/themes/kadakada/assets/img/top-' + DiffCounter + '.jpg)','background-size':'cover'});
+          $('#top-back').css({'background':'url(' + wp_path + '/assets/img/top-' + DiffCounter + '.jpg)','background-size':'cover'});
           DiffCounter = 0;
       }
-    },4000);
+    },6000);
   });
 
   var index = 0;
