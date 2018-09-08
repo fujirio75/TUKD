@@ -59,19 +59,19 @@
 			</div>
 			<nav class="header-nav">
 				<ul>
-					<a href="about/">
+					<a href="/#about">
 						<li>加太分室について</li>
 					</a>
-					<a href="article/">
+					<a href="/#article">
 						<li>ニュース</li>
 					</a>
-					<a href="document/">
+					<a href="/document/">
 						<li>研究資料</li>
 					</a>
-					<a href="#contact">
+					<a href="/#contact">
 						<li>アクセス</li>
 					</a>
-					<a href="contactform/contact">
+					<a href="/contactform/contact">
 						<li class="header-action-btn">お問い合わせ</li>
 					</a>
 				</ul>

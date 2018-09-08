@@ -577,17 +577,17 @@ header {
           line-height: 108px;
           color: #4C2A13;
           font-size: 14px;
-          list-style: none; }
+          list-style: none;
+          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
           header .header-inner nav ul li:hover {
-            background: #F5F5F9;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+            background: #F5F5F9; }
           header .header-inner nav ul li.header-action-btn {
             padding: 0 15px;
             color: #fff;
-            background: #9898AD; }
+            background: #9898AD;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
             header .header-inner nav ul li.header-action-btn:hover {
-              opacity: 0.8;
-              transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+              opacity: 0.8; }
 
 .sns-post-bar {
   top: 50vh;
@@ -608,7 +608,8 @@ header {
     width: 68px;
     height: 68px;
     background: #fff;
-    list-style: none; }
+    list-style: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     @media screen and (max-width: 1024px) {
       .sns-post-bar ul li {
         margin: 0 5px 3px 0; } }
@@ -687,10 +688,10 @@ section {
       font-weight: 700;
       line-height: 66px;
       color: #fff;
-      background: #AE7650; }
+      background: #AE7650;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       section .contents-wrapper .btn-more:hover {
-        opacity: 0.8;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        opacity: 0.8; }
   section.contents-top {
     max-height: 600px;
     position: relative; }
@@ -739,7 +740,10 @@ section {
           padding: 0 20px;
           line-height: 65px;
           color: #fff;
-          background: #AE7650; }
+          background: #AE7650;
+          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+          section.contents-top .contents-inner .catch-message .btn-top-message:hover {
+            opacity: 0.8; }
           @media screen and (max-width: 1024px) {
             section.contents-top .contents-inner .catch-message .btn-top-message {
               padding: 0 12px;
@@ -1004,7 +1008,10 @@ footer {
           margin: 0 0 30px;
           height: 88px; } }
       footer .footer-inner .footer-contents-wrapper img {
-        display: block; }
+        display: block;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        footer .footer-inner .footer-contents-wrapper img:hover {
+          opacity: 0.5; }
       footer .footer-inner .footer-contents-wrapper .footer-link-list a {
         text-decoration: none; }
       footer .footer-inner .footer-contents-wrapper .footer-link-list ul {

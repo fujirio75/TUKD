@@ -22,6 +22,10 @@ footer {
       }
       img {
         display: block;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        &:hover {
+          opacity: 0.5;
+        }
       }
       .footer-link-list {
         a {
@@ -53,6 +57,5 @@ footer {
         width: 93px;
       }
     }
-
   }
 }

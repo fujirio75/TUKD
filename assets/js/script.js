@@ -25,7 +25,7 @@
 
     var DiffCounter = 1;
     setInterval(function(){
-      if (DiffCounter < 2) {
+      if (DiffCounter < 3) {
         $('#top-back').css({'background':'url(' + wp_path + '/assets/img/top-' + DiffCounter + '.jpg)','background-size':'cover'});
         DiffCounter++;
       } else {
