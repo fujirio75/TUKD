@@ -16,7 +16,7 @@
     $(window).scroll(function () {
       Scrollnum = $(window).scrollTop()/15;
       ScrollPoint = Math.round(Scrollnum);
-      if (ScrollPoint > 45) {
+      if (ScrollPoint > 23) {
         $("#logo").attr('class', 'header-logo header-logo-folded');
       } else {
         $("#logo").removeAttr('class', 'header-logo-folded');
