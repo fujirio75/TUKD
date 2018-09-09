@@ -16,10 +16,11 @@
     $(window).scroll(function () {
       Scrollnum = $(window).scrollTop()/15;
       ScrollPoint = Math.round(Scrollnum);
-      if (ScrollPoint > 55) {
-        $('#logo').css({'opacity':'100'});
+      if (ScrollPoint > 45) {
+        $("#logo").attr('class', 'header-logo header-logo-folded');
       } else {
-        $('#logo').css({'opacity':'100'});
+        $("#logo").removeAttr('class', 'header-logo-folded');
+        $("#logo").attr('class', 'header-logo');
       }
     });
 
