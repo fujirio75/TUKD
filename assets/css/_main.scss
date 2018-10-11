@@ -21,7 +21,7 @@ section {
     width: $contents-wrapper-margin;
     height: 186px;
     background: #f00;
-    position: absolute;
+    position: absolute; 
   }
   &.contents-colorscheme-transparent .contents-wrapper:before{
     background: transparent;

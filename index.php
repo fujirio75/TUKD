@@ -58,7 +58,7 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<!-- <section id="article-before" class="contents-before-article contents-colorscheme-transparent">
+		<section id="article-before" class="contents-before-article contents-colorscheme-transparent">
 			<div class="contents-wrapper">
 				<i></i>
 				<div class="contents-before-article-contents">
@@ -91,13 +91,13 @@ get_header(); ?>
 
 							<?php endif; ?>
 						</ul>
-						<div class="btn-more">
+						<!-- <div class="btn-more">
 							さらに前のものはこちら
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 
 		<section id="about" class="contents-about contents-colorscheme-brand-accent">
 			<div class="contents-wrapper">
