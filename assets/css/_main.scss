@@ -21,7 +21,7 @@ section {
     width: $contents-wrapper-margin;
     height: 186px;
     background: #f00;
-    position: absolute; 
+    position: absolute;
   }
   &.contents-colorscheme-transparent .contents-wrapper:before{
     background: transparent;
@@ -261,6 +261,9 @@ section {
         margin: 0 -200px;
         padding: 131px 0;
         height: 36px;
+        @media screen and (max-width: 1024px)  {
+          display: none;
+        }
       }
       .contents-before-article-contents-inner {
         margin: 0 0 auto auto;
@@ -404,6 +407,7 @@ section {
         h1 {
           @media screen and (max-width: 1024px)  {
             font-size: 28px;
+            padding: 0;
           }
         }
         .contents-paragraph-main {
@@ -412,7 +416,11 @@ section {
             width: 100%;
             p {
               width: 100%;
-              padding: 20px;
+              padding: 20px 0;
+              .alignnone {
+                width: 100%;
+                height: 100%;
+              }
             }
           }
           .size-medium {
