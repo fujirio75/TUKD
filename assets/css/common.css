@@ -535,7 +535,8 @@ header {
     header .header-inner .header-logo {
       width: 196px;
       height: 251px;
-      background: linear-gradient(45deg, #AE7650, #AE6450); }
+      background: linear-gradient(45deg, #AE7650, #AE6450);
+      transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       @media screen and (max-width: 1024px) {
         header .header-inner .header-logo {
           width: 170px;
@@ -546,20 +547,37 @@ header {
         height: 100%;
         padding: 94px 0 0;
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-        header .header-inner .header-logo a:hover {
-          opacity: 0.5; }
         @media screen and (max-width: 1024px) {
           header .header-inner .header-logo a {
             display: flex;
             padding: 0; } }
-      header .header-inner .header-logo img {
-        display: block;
-        width: 136px;
-        margin: 0 auto; }
+        header .header-inner .header-logo a:hover {
+          opacity: 0.5; }
+        header .header-inner .header-logo a img {
+          display: block;
+          width: 136px;
+          margin: 0 auto; }
+          @media screen and (max-width: 1024px) {
+            header .header-inner .header-logo a img {
+              margin: auto;
+              width: 125px; } }
+      header .header-inner .header-logo-folded {
+        width: 114px;
+        height: 108px; }
         @media screen and (max-width: 1024px) {
-          header .header-inner .header-logo img {
-            margin: auto;
-            width: 125px; } }
+          header .header-inner .header-logo-folded {
+            width: 75px;
+            height: 75px; } }
+        header .header-inner .header-logo-folded a {
+          padding: 18px 0 0; }
+          @media screen and (max-width: 1024px) {
+            header .header-inner .header-logo-folded a {
+              padding: 2px 0 0; } }
+          header .header-inner .header-logo-folded a img {
+            width: 78px; }
+            @media screen and (max-width: 1024px) {
+              header .header-inner .header-logo-folded a img {
+                width: 53px; } }
     header .header-inner nav {
       height: 100%; }
       @media screen and (max-width: 1024px) {
@@ -577,17 +595,17 @@ header {
           line-height: 108px;
           color: #4C2A13;
           font-size: 14px;
-          list-style: none; }
+          list-style: none;
+          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
           header .header-inner nav ul li:hover {
-            background: #F5F5F9;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+            background: #F5F5F9; }
           header .header-inner nav ul li.header-action-btn {
             padding: 0 15px;
             color: #fff;
-            background: #9898AD; }
+            background: #9898AD;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
             header .header-inner nav ul li.header-action-btn:hover {
-              opacity: 0.8;
-              transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+              opacity: 0.8; }
 
 .sns-post-bar {
   top: 50vh;
@@ -608,7 +626,8 @@ header {
     width: 68px;
     height: 68px;
     background: #fff;
-    list-style: none; }
+    list-style: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     @media screen and (max-width: 1024px) {
       .sns-post-bar ul li {
         margin: 0 5px 3px 0; } }
@@ -687,10 +706,10 @@ section {
       font-weight: 700;
       line-height: 66px;
       color: #fff;
-      background: #AE7650; }
+      background: #AE7650;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       section .contents-wrapper .btn-more:hover {
-        opacity: 0.8;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        opacity: 0.8; }
   section.contents-top {
     max-height: 600px;
     position: relative; }
@@ -739,7 +758,10 @@ section {
           padding: 0 20px;
           line-height: 65px;
           color: #fff;
-          background: #AE7650; }
+          background: #AE7650;
+          transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+          section.contents-top .contents-inner .catch-message .btn-top-message:hover {
+            opacity: 0.8; }
           @media screen and (max-width: 1024px) {
             section.contents-top .contents-inner .catch-message .btn-top-message {
               padding: 0 12px;
@@ -951,9 +973,6 @@ section {
         section.page-contents-article .contents-wrapper .contents-paragraph {
           padding: 30px 30px; } }
       @media screen and (max-width: 1024px) {
-        section.page-contents-article .contents-wrapper .contents-paragraph p.p1, section.page-contents-article .contents-wrapper .contents-paragraph h1 {
-          padding: 0 30px; } }
-      @media screen and (max-width: 1024px) {
         section.page-contents-article .contents-wrapper .contents-paragraph h1 {
           font-size: 28px; } }
       section.page-contents-article .contents-wrapper .contents-paragraph .contents-paragraph-main {
@@ -962,8 +981,10 @@ section {
           section.page-contents-article .contents-wrapper .contents-paragraph .contents-paragraph-main {
             width: 100%; }
             section.page-contents-article .contents-wrapper .contents-paragraph .contents-paragraph-main p {
+              width: 100%; }
+            section.page-contents-article .contents-wrapper .contents-paragraph .contents-paragraph-main img {
               width: 100%;
-              padding: 20px; } }
+              height: 100%; } }
         section.page-contents-article .contents-wrapper .contents-paragraph .contents-paragraph-main .size-medium {
           width: 100%;
           height: 100%; }
@@ -1004,7 +1025,10 @@ footer {
           margin: 0 0 30px;
           height: 88px; } }
       footer .footer-inner .footer-contents-wrapper img {
-        display: block; }
+        display: block;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        footer .footer-inner .footer-contents-wrapper img:hover {
+          opacity: 0.5; }
       footer .footer-inner .footer-contents-wrapper .footer-link-list a {
         text-decoration: none; }
       footer .footer-inner .footer-contents-wrapper .footer-link-list ul {

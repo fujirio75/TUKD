@@ -79,9 +79,9 @@ section {
       line-height: 66px;
       color: #fff;
       background: $brand-main;
+      transition: $transition-main;
       &:hover {
         opacity: 0.8;
-        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
     }
   }
@@ -98,7 +98,7 @@ section {
       position: relative;
       z-index: 0;
       background: url("../img/top-0.jpg") 0% 0% / cover;
-      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: $transition-main;
       @media screen and (max-width: 1024px)  {
         margin: 0vw -100vw;
         min-width: 0;
@@ -136,6 +136,10 @@ section {
           line-height: 65px;
           color: #fff;
           background: $brand-main;
+          transition: $transition-main;
+          &:hover {
+            opacity: 0.8;
+          }
           @media screen and (max-width: 1024px)  {
             padding: 0 12px;
             width: 117px;
@@ -396,11 +400,6 @@ section {
         @media screen and (max-width: 1024px)  {
           padding: 30px 30px;
         }
-        p.p1,h1 {
-          @media screen and (max-width: 1024px)  {
-            padding: 0 30px;
-          }
-        }
         h1 {
           @media screen and (max-width: 1024px)  {
             font-size: 28px;
@@ -412,7 +411,10 @@ section {
             width: 100%;
             p {
               width: 100%;
-              padding: 20px;
+            }
+            img {
+              width: 100%;
+              height: 100%;
             }
           }
           .size-medium {
