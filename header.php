@@ -65,9 +65,9 @@
 					<a href="/#article">
 						<li>ニュース</li>
 					</a>
-					<a href="/document/">
+					<!-- <a href="/document/">
 						<li>研究資料</li>
-					</a>
+					</a> -->
 					<a href="/#contact">
 						<li>アクセス</li>
 					</a>

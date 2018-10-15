@@ -58,7 +58,7 @@ get_header(); ?>
 			</div>
 		</section>
 
-		<!-- <section id="article-before" class="contents-before-article contents-colorscheme-transparent">
+		<section id="article-before" class="contents-before-article contents-colorscheme-transparent">
 			<div class="contents-wrapper">
 				<i></i>
 				<div class="contents-before-article-contents">
@@ -91,13 +91,13 @@ get_header(); ?>
 
 							<?php endif; ?>
 						</ul>
-						<div class="btn-more">
+						<!-- <div class="btn-more">
 							さらに前のものはこちら
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 
 		<section id="about" class="contents-about contents-colorscheme-brand-accent">
 			<div class="contents-wrapper">
@@ -107,7 +107,15 @@ get_header(); ?>
 				<div class="contents-description">
 					<div class="contents-description-paragraph">
 						<p>
-							「東京大学 生産技術研究所 川添研究室 加太分室 地域ラボ」という長い名前のラボが、和歌山市の加太地域に設置されることになりました。<br>地域ラボの開設後は、私どものビジョンと市の政策を連動させ、空き家の建て替えや下水整備、電柱の地中化などのインフラ整備、地区の持つ漁業ブランドの強化による雇用創出など、デザインと政策の新しい関係を実践する予定です。
+							知識をローカライズする拠点<br>
+							<br>
+							東京大学は、1877年の創設以来、世界中の人々と協働し、様々な知識を生み出すことで、社会に貢献しようと試みてきました。<br>
+							<br>
+							しかし、価値観が多様化し、地域の抱える問題が拡張した現代においては、世界のどこでも通用する普遍的な知識だけでなく、場所ごとの状況に対応するための、いわば「知識のローカライズ」が必要です。<br>
+							<br>
+							加太分室では、	  東京大学の最新の研究成果を援用しつつ、住民組織や行政と連動し、デザインと政策の新しい関係を実践していきます。<br>
+							<br>
+							地域の拠点から生まれる新しい知恵によって、ひろく社会に貢献していくことが、21世紀の私たちの使命だと考えています。
 						</p>
 					</div>
 					<!-- <div class="btn-more">
