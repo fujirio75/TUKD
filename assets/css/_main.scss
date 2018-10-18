@@ -256,7 +256,6 @@ section {
       display: flex;
       margin: auto 0 auto auto;
       width: 816px;
-      height: 562px;
       background: $brand-foundation;
       @media screen and (max-width: 1024px)  {
         width: 100%;
@@ -265,6 +264,9 @@ section {
         margin: 0 -200px;
         padding: 131px 0;
         height: 36px;
+        @media screen and (max-width: 1024px)  {
+          display: none;
+        }
       }
       .contents-before-article-contents-inner {
         margin: 0 0 auto auto;

@@ -858,7 +858,6 @@ section {
     display: flex;
     margin: auto 0 auto auto;
     width: 816px;
-    height: 562px;
     background: #F5F5F9; }
     @media screen and (max-width: 1024px) {
       section.contents-before-article .contents-before-article-contents {
@@ -867,6 +866,9 @@ section {
       margin: 0 -200px;
       padding: 131px 0;
       height: 36px; }
+      @media screen and (max-width: 1024px) {
+        section.contents-before-article .contents-before-article-contents h3 {
+          display: none; } }
     section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner {
       margin: 0 0 auto auto;
       width: 700px; }
