@@ -68,7 +68,7 @@ get_header(); ?>
 					<div class="contents-before-article-contents-inner">
 						<ul>
 								<?php if ( have_posts() ) : ?>
-								<?php $primary_posts = get_posts(array('numberposts' => 5, 'offset' => 2)); ?>
+								<?php $primary_posts = get_posts(array('numberposts' => 20, 'offset' => 2)); ?>
 								<?php foreach ( $primary_posts as $post ) : setup_postdata( $post ); ?>
 								<?php
 									$_cat = get_the_category();
