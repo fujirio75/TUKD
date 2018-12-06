@@ -17,7 +17,6 @@ get_header(); ?>
 
 		<section class="page-contents-article contents-colorscheme-transparent">
 			<div class="contents-wrapper">
-
 				<div class="contents-info-post">
 					<?php
 					    $big = 9999999999;
@@ -34,14 +33,15 @@ get_header(); ?>
 					<p><?php the_author(); ?></p>
 					<p class="role"><?php the_author_meta('position'); ?></p>
 				</div>
-
 				<div class="contents-paragraph">
+					<div class="contents-category">
+						<?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?>
+					</div>
 					<h1><?php echo $post->post_title; ?></h1>
 					<div class="contents-paragraph-main">
 						<?php the_content(); ?>
 					</div>
 				</div>
-
 			</div>
 		</section>
 

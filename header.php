@@ -20,7 +20,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta property="og:title" content="加太分室 地域ラボ" />
 	<meta property="og:type" content="website" />
-	<meta property="og:description" content="東京大学生産技術研究所川添研究室加太分室地域ラボはデザインと政策の新しい関係を実践していきます。" />
+	<meta property="og:description" content="東京大学生産技術研究所川添研究室加太分室 地域ラボはデザインと政策の新しい関係を実践していきます。" />
 	<meta property="og:url" content="http://kada-lab.jp" />
 	<meta property="og:site_name" content="加太分室 地域ラボ" />
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/ogp.png" />
@@ -81,12 +81,12 @@
 
 	<div class="sns-post-bar">
 		<ul>
-			<a href="https://twitter.com/intent/tweet?text=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E5%AD%A6+%E7%94%9F%E7%94%A3%E6%8A%80%E8%A1%93%E7%A0%94%E7%A9%B6%E6%89%80+%E5%B7%9D%E6%B7%BB%E7%A0%94%E7%A9%B6%E5%AE%A4+%E5%8A%A0%E5%A4%AA%E5%88%86%E5%AE%A4+%E5%9C%B0%E5%9F%9F%E3%83%A9%E3%83%9C+-+http%3A%2F%2Fkada-lab.jp%2F">
+			<a href="https://twitter.com/share?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>" rel="nofollow" target="_blank">
 				<li>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
 				</li>
 			</a>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkada-lab.jp%2F&amp;src=sdkpreparse">
+			<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
 				<li>
 					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-facebook.svg" alt="Facebook">
 				</li>
