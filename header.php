@@ -12,6 +12,7 @@
 
 	  gtag('config', 'UA-124740773-1');
 	</script>
+	<script src='https://www.google.com/recaptcha/api.js?render=6LcCcH8UAAAAALQiPCurenBVRXYa1n-LGrzc1-5M'></script>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="//kada-lab.jp">
