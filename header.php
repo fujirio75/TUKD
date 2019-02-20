@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php wp_head(); ?>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124740773-1"></script>
 	<script>
@@ -13,18 +12,13 @@
 	  gtag('config', 'UA-124740773-1');
 	</script>
 	<script src='https://www.google.com/recaptcha/api.js?render=6LcCcH8UAAAAALQiPCurenBVRXYa1n-LGrzc1-5M'></script>
+	<?php wp_head(); ?>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="//kada-lab.jp">
 	<meta name="description" content="">
 	<meta name="format-detection" content="telephone=no,address=no,email=no">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta property="og:title" content="加太分室 地域ラボ" />
-	<meta property="og:type" content="website" />
-	<meta property="og:description" content="東京大学生産技術研究所川添研究室加太分室 地域ラボはデザインと政策の新しい関係を実践していきます。" />
-	<meta property="og:url" content="http://kada-lab.jp" />
-	<meta property="og:site_name" content="加太分室 地域ラボ" />
-	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/ogp.png" />
 	<meta property="fb:app_id" content="266420997323154">
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="cache-control" content="no-cache" />
@@ -80,20 +74,43 @@
 		</div>
 	</header>
 
-	<div class="sns-post-bar">
-		<ul>
-			<a href="https://twitter.com/share?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>" rel="nofollow" target="_blank">
-				<li>
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
-				</li>
-			</a>
-			<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
-				<li>
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-facebook.svg" alt="Facebook">
-				</li>
-			</a>
-		</ul>
-	</div>
+	<?php if ( is_singular() ): ?>
+
+		<div class="sns-post-bar">
+			<ul>
+				<a href="https://twitter.com/share?url=<?php echo get_the_permalink(); ?>&text=<?php echo get_the_title(); ?>-東京大学生産技術研究所川添研究室加太分室地域ラボ" rel="nofollow" target="_blank">
+					<li>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
+					</li>
+				</a>
+				<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
+					<li>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-facebook.svg" alt="Facebook">
+					</li>
+				</a>
+			</ul>
+		</div>
+
+	<?php else: ?>
+
+		<div class="sns-post-bar">
+			<ul>
+				<a href="https://twitter.com/share?url=http://kada-lab.jp/&text=東京大学生産技術研究所川添研究室加太分室地域ラボ" rel="nofollow" target="_blank">
+					<li>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-twitter.svg" alt="Twitter">
+					</li>
+				</a>
+				<a href="http://www.facebook.com/share.php?u=<?php echo get_the_permalink(); ?>" rel="nofollow" target="_blank">
+					<li>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon-facebook.svg" alt="Facebook">
+					</li>
+				</a>
+			</ul>
+		</div>
+
+	<?php endif; ?>
+
+
 
 
 	<main>
