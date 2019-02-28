@@ -230,6 +230,42 @@ section {
               padding: 5px 10px;
               background: $brand-main;
               color: #fff;
+              padding: 5px 10px 5px 43px;
+              position: relative;
+              &:before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 12px;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+              }
+              &.news {
+                &:before {
+                  background: url('../img/cat-news.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              &.notice {
+                &:before {
+                  background: url('../img/cat-notice.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              &.column {
+                &:before {
+                  background: url('../img/cat-column.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
             }
             time {
               margin: 0 0 0 7px;
@@ -283,17 +319,62 @@ section {
         }
         ul {
           li {
+            display: flex;
             margin: 0 0 20px;
             padding: 20px;
             background: #fff;
             &:hover {
               background: $brand-foundation;
             }
+            img {
+              width: 240px;
+              height: 100%;
+              margin: 0 24px 0 0;
+            }
+            .article-contents-text {
+              display: block;
+            }
             .article-contents-category {
               display: inline-block;
               padding: 5px 10px;
               background: $brand-main;
               color: #fff;
+              padding: 5px 10px 5px 43px;
+              position: relative;
+              &:before {
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: 12px;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+              }
+              &.news {
+                &:before {
+                  background: url('../img/cat-news.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              &.notice {
+                &:before {
+                  background: url('../img/cat-notice.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
+              &.column {
+                &:before {
+                  background: url('../img/cat-column.svg');
+                  background-size: contain;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                }
+              }
             }
             time {
               display: block;
@@ -316,6 +397,9 @@ section {
     @media screen and (max-width: 1024px)  {
       background: $brand-accent url(../img/about-background.png) no-repeat center right /cover;
     }
+    h3 {
+      font-size: 24px;
+    }
     .contents-wrapper {
       .contents-description {
         padding: 0 85px;
@@ -323,11 +407,28 @@ section {
           padding: 0 25px;
         }
         .contents-description-paragraph {
-          margin: 80px 0;
-          width: 365px;
+          margin: 0 0 80px 7px;
           color: #fff;
           @media screen and (max-width: 1024px)  {
             width: auto;
+          }
+          .contents-description-paragraph-wrapper {
+            display: flex;
+            p {
+              display: block;
+              width: 365px;
+              margin: 0 24px 0 0;
+            }
+          }
+        }
+        .contents-description-profile {
+          margin: 0 48px 0 0;
+          img {
+            width: 240px;
+          }
+          p {
+            width: auto!important;
+            font-size: 13px;
           }
         }
       }

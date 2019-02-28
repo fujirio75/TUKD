@@ -123,9 +123,10 @@ header {
     }
     li {
       display: flex;
-      margin: 0 0 3px;
+      margin: 0 0 8px;
       width: 68px;
       height: 68px;
+      border: 1px solid $border-main;
       background: #fff;
       list-style: none;
       transition: $transition-main;

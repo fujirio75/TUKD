@@ -26,6 +26,7 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Icon made by https://www.flaticon.com/authors/picol from www.flaticon.com  -->
 
 	<?php wp_footer(); ?>
 

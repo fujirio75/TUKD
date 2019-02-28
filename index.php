@@ -33,6 +33,7 @@ get_header(); ?>
 						<?php
 							$_cat = get_the_category();
 							$cat_name = $_cat[0] -> name;
+							$cat_slug = $_cat[0] -> slug;
 							$title = get_the_title();																			// 記事タイトルを取得
 							$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
   						$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  	// $sizeサイズの画像内容を取得
@@ -40,7 +41,9 @@ get_header(); ?>
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-								<div class="article-contents-category"><?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?></div>
+								<?php echo '<div class="article-contents-category '.$cat_slug.'">';?>
+									<?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?>
+								</div>
 								<time><?php the_time('Y.m.d'); ?></time>
 								<h4><?php if(mb_strlen($post->post_title)>35) { $title= mb_substr($post->post_title,0,35) ; echo $title. '…' ;
 										} else {echo $post->post_title;}?></h4>
@@ -74,14 +77,23 @@ get_header(); ?>
 							<?php
 								$_cat = get_the_category();
 								$cat_name = $_cat[0] -> name;
+								$cat_slug = $_cat[0] -> slug;
 								$title = get_the_title();
+								$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
+	  						$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  	// $sizeサイズの画像内容を取得
+	  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 							?>
 							<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
 								<li class="article-contents">
-									<div class="article-contents-category"><?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?></div>
-									<h4><?php if(mb_strlen($post->post_title)>35) { $title= mb_substr($post->post_title,0,35) ; echo $title. '…' ;} else {echo $post->post_title;}?></h4>
-									<time><?php the_time('Y.m.d'); ?></time>
+									<?php echo '<img src="'.$thumb_src.'">';?>
+									<div class="article-contents-text">
+										<?php echo '<div class="article-contents-category '.$cat_slug.'">';?>
+											<?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?>
+										</div>
+										<h4><?php if(mb_strlen($post->post_title)>35) { $title= mb_substr($post->post_title,0,35) ; echo $title. '…' ;} else {echo $post->post_title;}?></h4>
+										<time><?php the_time('Y.m.d'); ?></time>
+									</div>
 								</li>
 							</a>
 							<?php endforeach; wp_reset_postdata(); ?>
@@ -105,17 +117,37 @@ get_header(); ?>
 				</h2>
 				<div class="contents-description">
 					<div class="contents-description-paragraph">
-						<p>
-							知識をローカライズする拠点<br>
-							<br>
-							東京大学は、1877年の創設以来、世界中の人々と協働し、様々な知識を生み出すことで、社会に貢献しようと試みてきました。<br>
-							<br>
-							しかし、価値観が多様化し、地域の抱える問題が拡張した現代においては、世界のどこでも通用する普遍的な知識だけでなく、場所ごとの状況に対応するための、いわば「知識のローカライズ」が必要です。<br>
-							<br>
-							加太分室では、	  東京大学の最新の研究成果を援用しつつ、住民組織や行政と連動し、デザインと政策の新しい関係を実践していきます。<br>
-							<br>
-							地域の拠点から生まれる新しい知恵によって、ひろく社会に貢献していくことが、21世紀の私たちの使命だと考えています。
-						</p>
+						<h3>知識をローカライズする拠点</h3>
+						<div class="contents-description-paragraph-wrapper">
+							<p>
+								東京大学は、1877年の創設以来、世界中の人々と協働し、様々な知識を生み出すことで、社会に貢献しようと試みてきました。<br>
+								しかし、価値観が多様化し、地域の抱える問題が拡張した現代においては、世界のどこでも通用する普遍的な知識だけでなく、場所ごとの状況に対応するための、いわば「知識のローカライズ」が必要です。<br>
+							</p>
+							<p>
+								加太分室では、	  東京大学の最新の研究成果を援用しつつ、住民組織や行政と連動し、デザインと政策の新しい関係を実践していきます。<br>
+								地域の拠点から生まれる新しい知恵によって、ひろく社会に貢献していくことが、21世紀の私たちの使命だと考えています。
+							</p>
+						</div>
+					</div>
+					<div class="contents-description-paragraph">
+						<h3>MEMBER</h3>
+						<div class="contents-description-paragraph-wrapper">
+							<div class="contents-description-profile">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-kawazoe.jpg" alt="川添善行">
+								<h4>川添 善行</h4>
+								<p>東京大学生産技術研究所 准教授</p>
+							</div>
+							<div class="contents-description-profile">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-aoki.jpg" alt="青木佳子">
+								<h4>青木 佳子</h4>
+								<p>東京大学生産技術研究所 特任助教</p>
+							</div>
+							<div class="contents-description-profile">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-kawasaki.jpg" alt="川﨑麻衣子">
+								<h4>川﨑 麻衣子</h4>
+								<p>運営サポート</p>
+							</div>
+						</div>
 					</div>
 					<!-- <div class="btn-more">
 						くわしくはこちら
