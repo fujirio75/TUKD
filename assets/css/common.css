@@ -913,12 +913,18 @@ section {
         margin: 0 0 20px;
         padding: 20px;
         background: #fff; }
+        @media screen and (max-width: 1024px) {
+          section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li {
+            display: block; } }
         section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li:hover {
           background: #F5F5F9; }
         section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li img {
-          width: 240px;
+          width: 260px;
           height: 100%;
           margin: 0 24px 0 0; }
+          @media screen and (max-width: 1024px) {
+            section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li img {
+              margin: 0 0 24px; } }
         section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li .article-contents-text {
           display: block; }
         section.contents-before-article .contents-before-article-contents .contents-before-article-contents-inner ul li .article-contents-category {
@@ -981,12 +987,22 @@ section {
             width: auto; } }
         section.contents-about .contents-wrapper .contents-description .contents-description-paragraph .contents-description-paragraph-wrapper {
           display: flex; }
+          @media screen and (max-width: 1024px) {
+            section.contents-about .contents-wrapper .contents-description .contents-description-paragraph .contents-description-paragraph-wrapper {
+              display: block; } }
           section.contents-about .contents-wrapper .contents-description .contents-description-paragraph .contents-description-paragraph-wrapper p {
             display: block;
             width: 365px;
             margin: 0 24px 0 0; }
+            @media screen and (max-width: 1024px) {
+              section.contents-about .contents-wrapper .contents-description .contents-description-paragraph .contents-description-paragraph-wrapper p {
+                width: 310px;
+                margin: 0 0 12px 0; } }
       section.contents-about .contents-wrapper .contents-description .contents-description-profile {
         margin: 0 48px 0 0; }
+        @media screen and (max-width: 1024px) {
+          section.contents-about .contents-wrapper .contents-description .contents-description-profile {
+            margin: 0 0 48px 0; } }
         section.contents-about .contents-wrapper .contents-description .contents-description-profile img {
           width: 240px; }
         section.contents-about .contents-wrapper .contents-description .contents-description-profile p {

@@ -323,13 +323,19 @@ section {
             margin: 0 0 20px;
             padding: 20px;
             background: #fff;
+            @media screen and (max-width: 1024px)  {
+              display: block;
+            }
             &:hover {
               background: $brand-foundation;
             }
             img {
-              width: 240px;
+              width: 260px;
               height: 100%;
               margin: 0 24px 0 0;
+              @media screen and (max-width: 1024px)  {
+                margin: 0 0 24px;
+              }
             }
             .article-contents-text {
               display: block;
@@ -414,15 +420,25 @@ section {
           }
           .contents-description-paragraph-wrapper {
             display: flex;
+            @media screen and (max-width: 1024px)  {
+              display: block;
+            }
             p {
               display: block;
               width: 365px;
               margin: 0 24px 0 0;
+              @media screen and (max-width: 1024px)  {
+                width: 310px;
+                margin: 0 0 12px 0;
+              }
             }
           }
         }
         .contents-description-profile {
           margin: 0 48px 0 0;
+          @media screen and (max-width: 1024px)  {
+            margin: 0 0 48px 0;
+          }
           img {
             width: 240px;
           }
