@@ -36,7 +36,7 @@ get_header(); ?>
 							$cat_slug = $_cat[0] -> slug;
 							$title = get_the_title();																			// 記事タイトルを取得
 							$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-  						$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  	// $sizeサイズの画像内容を取得
+  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
   						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
 								$cat_slug = $_cat[0] -> slug;
 								$title = get_the_title();
 								$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-	  						$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  	// $sizeサイズの画像内容を取得
+	  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
 	  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 							?>
 							<?php add_filter('the_category', 'add_category_en_name'); ?>
@@ -145,7 +145,7 @@ get_header(); ?>
 							<div class="contents-description-profile">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-kawasaki.jpg" alt="川﨑麻衣子">
 								<h4>川﨑 麻衣子</h4>
-								<p>運営サポート</p>
+								<p>運営サポート・デザイナー</p>
 							</div>
 						</div>
 					</div>
