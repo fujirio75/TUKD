@@ -27,7 +27,7 @@ get_header(); ?>
 					    );
 					    echo paginate_links($arg);
 					?>
-				<?php $author_id = $post->post_author; ?>
+					<?php $author_id = $post->post_author; ?>
 					<time><?php the_time('Y.m.d'); ?></time>
 					<p>written by</p>
 					<p><?php the_author(); ?></p>

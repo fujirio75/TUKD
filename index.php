@@ -145,7 +145,7 @@ get_header(); ?>
 							<div class="contents-description-profile">
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-kawasaki.jpg" alt="川﨑麻衣子">
 								<h4>川﨑 麻衣子</h4>
-								<p>運営サポート・デザイナー</p>
+								<p>デザイナー・運営サポート</p>
 							</div>
 						</div>
 					</div>
