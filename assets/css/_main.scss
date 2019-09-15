@@ -35,7 +35,6 @@ section {
   .contents-wrapper {
     margin: 0 auto;
     width: 1024px;
-    height: 100%;
     font-size: 14px;
     line-height: 30px;
     @media screen and (max-width: 1024px)  {
@@ -289,7 +288,7 @@ section {
     i {
       right: 0;
       display: block;
-      height: 562px;
+      height: 984px;
       width: $contents-wrapper-margin;
       background: $brand-foundation;
       position: absolute;
@@ -298,6 +297,7 @@ section {
     .contents-before-article-contents {
       display: flex;
       margin: auto 0 auto auto;
+      padding: 0 0 48px;
       width: 816px;
       background: $brand-foundation;
       @media screen and (max-width: 1024px)  {

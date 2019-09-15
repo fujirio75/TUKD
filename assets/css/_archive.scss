@@ -30,8 +30,11 @@
         flex-wrap: wrap;
         li.article-contents {
           width: 327px;
-          border: 1px solid $brand-foundation;
+          padding: 24px;
           overflow: hidden;
+          &:hover {
+            background: $brand-foundation;
+          }
           .article-contents-image {
             width: 100%;
             height: 274px;
@@ -40,8 +43,49 @@
               height: 100%;
               background-position: center;
               background-size: cover;
+              background-repeat: no-repeat;
             }
           }
+          .article-contents-category {
+            padding: 16px 0;
+            display: inline-block;
+            color: $brand-accent;
+          }
+          time {
+            padding: 16px 0;
+            display: inline-block;
+            color: $brand-accent;
+          }
+          h4 {
+            margin: 0;
+            font-size: 24px;
+            color: $brand-black;
+          }
+        }
+      }
+    }
+    &.contents-paginate-links {
+      margin: 0 auto;
+      padding: 48px 0;
+      width: 1024px;
+      background: $brand-foundation;
+      a {
+        color: $brand-black;
+        background: #fff;
+      }
+      .paginate-links {
+        margin: 0 auto;
+        text-align: center;
+        color: $brand-black;
+        .page-numbers {
+          padding: 8px;
+        }
+      }
+      .next {
+        background: $brand-main;
+        color: #fff;
+        &:hover {
+          opacity: 0.8;
         }
       }
     }

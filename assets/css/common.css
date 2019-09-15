@@ -667,7 +667,6 @@ section {
   section .contents-wrapper {
     margin: 0 auto;
     width: 1024px;
-    height: 100%;
     font-size: 14px;
     line-height: 30px; }
     @media screen and (max-width: 1024px) {
@@ -882,7 +881,7 @@ section {
   section.contents-before-article i {
     right: 0;
     display: block;
-    height: 562px;
+    height: 984px;
     width: calc((100% - 1024px) / 2);
     background: #F5F5F9;
     position: absolute;
@@ -890,6 +889,7 @@ section {
   section.contents-before-article .contents-before-article-contents {
     display: flex;
     margin: auto 0 auto auto;
+    padding: 0 0 48px;
     width: 816px;
     background: #F5F5F9; }
     @media screen and (max-width: 1024px) {
@@ -1143,8 +1143,10 @@ section {
     flex-wrap: wrap; }
     .post-type-archive section.contents-article-list ul li.article-contents {
       width: 327px;
-      border: 1px solid #F5F5F9;
+      padding: 24px;
       overflow: hidden; }
+      .post-type-archive section.contents-article-list ul li.article-contents:hover {
+        background: #F5F5F9; }
       .post-type-archive section.contents-article-list ul li.article-contents .article-contents-image {
         width: 100%;
         height: 274px; }
@@ -1152,7 +1154,39 @@ section {
           width: 100%;
           height: 100%;
           background-position: center;
-          background-size: cover; }
+          background-size: cover;
+          background-repeat: no-repeat; }
+      .post-type-archive section.contents-article-list ul li.article-contents .article-contents-category {
+        padding: 16px 0;
+        display: inline-block;
+        color: #9898AD; }
+      .post-type-archive section.contents-article-list ul li.article-contents time {
+        padding: 16px 0;
+        display: inline-block;
+        color: #9898AD; }
+      .post-type-archive section.contents-article-list ul li.article-contents h4 {
+        margin: 0;
+        font-size: 24px;
+        color: #4C2A13; }
+.post-type-archive section.contents-paginate-links {
+  margin: 0 auto;
+  padding: 48px 0;
+  width: 1024px;
+  background: #F5F5F9; }
+  .post-type-archive section.contents-paginate-links a {
+    color: #4C2A13;
+    background: #fff; }
+  .post-type-archive section.contents-paginate-links .paginate-links {
+    margin: 0 auto;
+    text-align: center;
+    color: #4C2A13; }
+    .post-type-archive section.contents-paginate-links .paginate-links .page-numbers {
+      padding: 8px; }
+  .post-type-archive section.contents-paginate-links .next {
+    background: #AE7650;
+    color: #fff; }
+    .post-type-archive section.contents-paginate-links .next:hover {
+      opacity: 0.8; }
 
 footer {
   width: 100%;

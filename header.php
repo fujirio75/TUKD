@@ -24,8 +24,8 @@
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta http-equiv="expires" content="0" />
 	<link rel="canonical" href="//kada-lab.jp">
-	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/icon/icon.png">
+	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon.png">
+	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/assets/img/favicon.png">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/common.css">
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyOWxUm0wD1O9kdIRsW6CBt5HliZrAiS0&callback=initMap" type="text/javascript"></script>
 	<script>

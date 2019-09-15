@@ -36,8 +36,8 @@ get_header(); ?>
 							$cat_slug = $_cat[0] -> slug;
 							$title = get_the_title();																			// 記事タイトルを取得
 							$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
-  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
+							$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
+							$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
@@ -72,7 +72,7 @@ get_header(); ?>
 					<div class="contents-before-article-contents-inner">
 						<ul>
 							<?php if ( have_posts() ) : ?>
-							<?php $primary_posts = get_posts(array('numberposts' => 20, 'offset' => 2)); ?>
+							<?php $primary_posts = get_posts(array('numberposts' => 4, 'offset' => 2)); ?>
 							<?php foreach ( $primary_posts as $post ) : setup_postdata( $post ); ?>
 							<?php
 								$_cat = get_the_category();
@@ -80,8 +80,8 @@ get_header(); ?>
 								$cat_slug = $_cat[0] -> slug;
 								$title = get_the_title();
 								$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-	  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
-	  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
+								$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
+								$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 							?>
 							<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
@@ -102,9 +102,11 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 							<?php endif; ?>
 						</ul>
-						<!-- <div class="btn-more">
-							さらに前のものはこちら
-						</div> -->
+						<a href="article/">
+						<div class="btn-more">
+							さらに前の記事はこちら
+						</div>
+						</a>
 					</div>
 				</div>
 			</div>

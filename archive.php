@@ -15,7 +15,7 @@ Template Name: Archive
 	<div class="article-list">
 		<ul>
 		<?php
-	$paged = (int) get_query_var('paged');
+	$paged = get_query_var('paged') ? get_query_var('paged') : 1 ;
 	$args = array(
 		'posts_per_page' => 3,
 		'paged' => $paged,
@@ -34,16 +34,14 @@ Template Name: Archive
 		$cat_name = $_cat[0] -> name;
 		$title = get_the_title();																			// 記事タイトルを取得
 		$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-		$thumb_img = wp_get_attachment_image_src($thumb_id, $size);  	// $sizeサイズの画像内容を取得
+		$thumb_img = wp_get_attachment_image_src($thumb_id, 'large');  	// $sizeサイズの画像内容を取得
 		$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 	?>
 	<?php add_filter('the_category', 'add_category_en_name'); ?>
 		<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 			<div class="article-contents-image">
-				<?php echo '<div class="article-contents-image-contents" style=" background: url("'.$thumb_src.'");">';?>
-
-				</div>
-
+				<?php echo '<div class="article-contents-image-contents" style=" background-image: url('.$thumb_src.'); ">';?>
+			</div>
 			</div>
 			<div class="article-contents-category"><?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?></div>
 			<time><?php the_time('Y.m.d'); ?></time>
@@ -58,18 +56,19 @@ Template Name: Archive
 	</ul>
 	</div>
 </section>
-
-
-
-<?php
-if ($the_query->max_num_pages > 1) {
-	echo paginate_links(array(
-		'base' => get_pagenum_link(1) . '%_%',
-		'format' => 'page/%#%/',
-		'current' => max(1, $paged),
-		'total' => $the_query->max_num_pages
-	));
-}
-?>
+<section class="contents-paginate-links">
+	<div class="paginate-links">
+	<?php
+	if ($the_query->max_num_pages > 1) {
+		echo paginate_links(array(
+			'base' => get_pagenum_link(1) . '%_%',
+			'format' => 'page/%#%/',
+			'current' => max(1, $paged),
+			'total' => $the_query->max_num_pages
+		));
+	}
+	?>
+	</div>
+</section>
 
 <?php wp_reset_postdata(); ?>
