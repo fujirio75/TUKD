@@ -288,8 +288,8 @@ section {
     i {
       right: 0;
       display: block;
-      height: 984px;
       width: $contents-wrapper-margin;
+      height: calc(100% - 172px);
       background: $brand-foundation;
       position: absolute;
       z-index: 1;

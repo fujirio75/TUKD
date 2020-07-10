@@ -881,8 +881,8 @@ section {
   section.contents-before-article i {
     right: 0;
     display: block;
-    height: 984px;
     width: calc((100% - 1024px) / 2);
+    height: calc(100% - 172px);
     background: #F5F5F9;
     position: absolute;
     z-index: 1; }
