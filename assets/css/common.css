@@ -1117,75 +1117,75 @@ section {
   border: none;
   background: #F5F5F9; }
 
-.post-type-archive section.contents-top {
+.page-template-archive section.contents-top {
   display: flex;
   background: #F5F5F9;
   width: 100%;
   height: 400px; }
-  .post-type-archive section.contents-top .title-container {
+  .page-template-archive section.contents-top .title-container {
     margin: auto auto 0;
     padding: 0 0 32px;
     text-align: center; }
-    .post-type-archive section.contents-top .title-container h1 {
+    .page-template-archive section.contents-top .title-container h1 {
       font-size: 40px; }
-      .post-type-archive section.contents-top .title-container h1::after {
+      .page-template-archive section.contents-top .title-container h1::after {
         content: "";
         display: block;
         margin: 16px auto 0;
         width: 64px;
         height: 8px;
         background: #AE7650; }
-.post-type-archive section.contents-article-list {
+.page-template-archive section.contents-article-list {
   margin: 0 auto;
   width: 1024px; }
-  .post-type-archive section.contents-article-list ul {
+  .page-template-archive section.contents-article-list ul {
     display: flex;
     flex-wrap: wrap; }
-    .post-type-archive section.contents-article-list ul li.article-contents {
+    .page-template-archive section.contents-article-list ul li.article-contents {
       width: 327px;
       padding: 24px;
       overflow: hidden; }
-      .post-type-archive section.contents-article-list ul li.article-contents:hover {
+      .page-template-archive section.contents-article-list ul li.article-contents:hover {
         background: #F5F5F9; }
-      .post-type-archive section.contents-article-list ul li.article-contents .article-contents-image {
+      .page-template-archive section.contents-article-list ul li.article-contents .article-contents-image {
         width: 100%;
         height: 274px; }
-        .post-type-archive section.contents-article-list ul li.article-contents .article-contents-image .article-contents-image-contents {
+        .page-template-archive section.contents-article-list ul li.article-contents .article-contents-image .article-contents-image-contents {
           width: 100%;
           height: 100%;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
-      .post-type-archive section.contents-article-list ul li.article-contents .article-contents-category {
+      .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category {
         padding: 16px 0;
         display: inline-block;
         color: #9898AD; }
-      .post-type-archive section.contents-article-list ul li.article-contents time {
+      .page-template-archive section.contents-article-list ul li.article-contents time {
         padding: 16px 0;
         display: inline-block;
         color: #9898AD; }
-      .post-type-archive section.contents-article-list ul li.article-contents h4 {
+      .page-template-archive section.contents-article-list ul li.article-contents h4 {
         margin: 0;
         font-size: 24px;
         color: #4C2A13; }
-.post-type-archive section.contents-paginate-links {
+.page-template-archive section.contents-paginate-links {
   margin: 0 auto;
   padding: 48px 0;
   width: 1024px;
   background: #F5F5F9; }
-  .post-type-archive section.contents-paginate-links a {
+  .page-template-archive section.contents-paginate-links a {
     color: #4C2A13;
     background: #fff; }
-  .post-type-archive section.contents-paginate-links .paginate-links {
+  .page-template-archive section.contents-paginate-links .paginate-links {
     margin: 0 auto;
     text-align: center;
     color: #4C2A13; }
-    .post-type-archive section.contents-paginate-links .paginate-links .page-numbers {
+    .page-template-archive section.contents-paginate-links .paginate-links .page-numbers {
       padding: 8px; }
-  .post-type-archive section.contents-paginate-links .next {
+  .page-template-archive section.contents-paginate-links .next {
     background: #AE7650;
     color: #fff; }
-    .post-type-archive section.contents-paginate-links .next:hover {
+    .page-template-archive section.contents-paginate-links .next:hover {
       opacity: 0.8; }
 
 footer {

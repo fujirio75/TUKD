@@ -36,8 +36,8 @@ get_header(); ?>
 							$cat_slug = $_cat[0] -> slug;
 							$title = get_the_title();																			// 記事タイトルを取得
 							$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-							$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
-							$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
+  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
+  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
@@ -72,7 +72,7 @@ get_header(); ?>
 					<div class="contents-before-article-contents-inner">
 						<ul>
 							<?php if ( have_posts() ) : ?>
-							<?php $primary_posts = get_posts(array('numberposts' => 4, 'offset' => 2)); ?>
+							<?php $primary_posts = get_posts(array('numberposts' => 20, 'offset' => 2)); ?>
 							<?php foreach ( $primary_posts as $post ) : setup_postdata( $post ); ?>
 							<?php
 								$_cat = get_the_category();
@@ -80,8 +80,8 @@ get_header(); ?>
 								$cat_slug = $_cat[0] -> slug;
 								$title = get_the_title();
 								$thumb_id = get_post_thumbnail_id();                         	// アイキャッチ画像のIDを取得
-								$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
-								$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
+	  						$thumb_img = wp_get_attachment_image_src($thumb_id,large);  	// $sizeサイズの画像内容を取得
+	  						$thumb_src = $thumb_img[0];    																// 画像のurlだけ取得
 							?>
 							<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
@@ -102,7 +102,7 @@ get_header(); ?>
 							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 							<?php endif; ?>
 						</ul>
-						<a href="article/">
+						<a href="article-list/">
 						<div class="btn-more">
 							さらに前の記事はこちら
 						</div>
@@ -148,6 +148,11 @@ get_header(); ?>
 								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-kawasaki.jpg" alt="川﨑麻衣子">
 								<h4>川﨑 麻衣子</h4>
 								<p>デザイナー・運営サポート</p>
+							</div>
+							<div class="contents-description-profile">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/prof-nakamoto.jpg" alt="">
+								<h4>中本 有美</h4>
+								<p>東京大学生産技術研究所 派遣連携研究員（和歌山市）</p>
 							</div>
 						</div>
 					</div>
