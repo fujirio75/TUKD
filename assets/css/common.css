@@ -1004,7 +1004,7 @@ section {
           section.contents-about .contents-wrapper .contents-description .contents-description-profile {
             margin: 0 0 48px 0; } }
         section.contents-about .contents-wrapper .contents-description .contents-description-profile img {
-          width: 240px; }
+          width: 186px; }
         section.contents-about .contents-wrapper .contents-description .contents-description-profile p {
           width: auto !important;
           font-size: 13px; }
@@ -1138,13 +1138,22 @@ section {
 .page-template-archive section.contents-article-list {
   margin: 0 auto;
   width: 1024px; }
+  @media screen and (max-width: 1024px) {
+    .page-template-archive section.contents-article-list {
+      width: 100%; } }
   .page-template-archive section.contents-article-list ul {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin: 24px 0;
+    padding: 0; }
     .page-template-archive section.contents-article-list ul li.article-contents {
       width: 327px;
       padding: 24px;
       overflow: hidden; }
+      @media screen and (max-width: 1024px) {
+        .page-template-archive section.contents-article-list ul li.article-contents {
+          width: 90%;
+          margin: auto; } }
       .page-template-archive section.contents-article-list ul li.article-contents:hover {
         background: #F5F5F9; }
       .page-template-archive section.contents-article-list ul li.article-contents .article-contents-image {
@@ -1157,9 +1166,35 @@ section {
           background-size: cover;
           background-repeat: no-repeat; }
       .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category {
-        padding: 16px 0;
         display: inline-block;
-        color: #9898AD; }
+        background: #AE7650;
+        color: #fff;
+        padding: 5px 10px 5px 43px;
+        position: relative; }
+        .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category:before {
+          content: "";
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 12px;
+          margin: auto;
+          top: 0;
+          bottom: 0; }
+        .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category.news:before {
+          background: url("../img/cat-news.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat; }
+        .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category.notice:before {
+          background: url("../img/cat-notice.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat; }
+        .page-template-archive section.contents-article-list ul li.article-contents .article-contents-category.column:before {
+          background: url("../img/cat-column.svg");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat; }
       .page-template-archive section.contents-article-list ul li.article-contents time {
         padding: 16px 0;
         display: inline-block;
@@ -1173,19 +1208,27 @@ section {
   padding: 48px 0;
   width: 1024px;
   background: #F5F5F9; }
+  @media screen and (max-width: 1024px) {
+    .page-template-archive section.contents-paginate-links {
+      width: 100%; } }
   .page-template-archive section.contents-paginate-links a {
-    color: #4C2A13;
-    background: #fff; }
+    color: #AE7650;
+    background: #fff;
+    text-decoration: underline; }
   .page-template-archive section.contents-paginate-links .paginate-links {
     margin: 0 auto;
     text-align: center;
     color: #4C2A13; }
     .page-template-archive section.contents-paginate-links .paginate-links .page-numbers {
-      padding: 8px; }
-  .page-template-archive section.contents-paginate-links .next {
+      padding: 16px;
+      margin: -2px; }
+      .page-template-archive section.contents-paginate-links .paginate-links .page-numbers.current {
+        background: #9898AD;
+        color: #fff; }
+  .page-template-archive section.contents-paginate-links .next, .page-template-archive section.contents-paginate-links .prev {
     background: #AE7650;
     color: #fff; }
-    .page-template-archive section.contents-paginate-links .next:hover {
+    .page-template-archive section.contents-paginate-links .next:hover, .page-template-archive section.contents-paginate-links .prev:hover {
       opacity: 0.8; }
 
 footer {
