@@ -21,7 +21,7 @@ get_header(); ?>
 						?>
 						<?php add_filter('the_category', 'add_category_en_name'); ?>
 							<a title="<?php the_title(); ?>" href="<?php the_permalink() ?>">
-								<div class="category"></div>
+								<div class="category"><?php $cat = get_the_category(); for ($i = 0; $i < count($cat); ++$i) { echo $cat[$i]->cat_name;}?></div>
 								<?php the_post_thumbnail(); ?>
 								<section class="info">
 									<h4><?php if(mb_strlen($post->post_title)>17) { $title= mb_substr($post->post_title,0,17) ; echo $title. '…' ;
